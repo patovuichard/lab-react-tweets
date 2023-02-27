@@ -37,12 +37,16 @@ const tweetsArray = [
 function App() {
   return (
     <div className="App">
-      {/* for (let i = 0; i < 3; i++){
-        <Tweet tweet={ tweetsArray[i] }/>
-      } */}
-      <Tweet tweet={ tweetsArray[0] }/>
-      <Tweet tweet={ tweetsArray[1] }/>
-      <Tweet tweet={ tweetsArray[2] }/>
+
+      {tweetsArray.map(function (each) {
+        return(
+          <Tweet tweet={each} />
+        );
+      })}
+
+      {/* <Tweet tweet={tweetsArray[0]} />
+      <Tweet tweet={tweetsArray[1]} />
+      <Tweet tweet={tweetsArray[2]} /> */}
     </div>
   );
 }
